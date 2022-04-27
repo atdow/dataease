@@ -22,7 +22,8 @@ export default {
   data() {
     return {
       component: PanelMain,
-      componentName: 'PanelMain',
+      // componentName: 'PanelMain',
+      componentName: 'PanelEdit',
       param: {}
     }
   },

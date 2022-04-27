@@ -1,12 +1,43 @@
+/*
+ * @Author: atdow
+ * @Date: 2022-04-27 15:27:03
+ * @LastEditors: null
+ * @LastEditTime: 2022-04-27 18:35:57
+ * @Description: file description
+ */
 
 const getDefaultState = () => {
   return {
     panelName: '',
     panelInfo: {
-      id: null,
-      name: '',
-      preStyle: null,
-      proxy: null
+      // id: null,
+      // name: '',
+      // preStyle: null,
+      // proxy: null,
+      'id': '5a3e3189-c5cf-11ec-ab02-6b7baca5d5c9',
+      'name': 'zdw1',
+      'pid': '54ef3ee8-c5cf-11ec-ab02-6b7baca5d5c9',
+      'level': 1,
+      'nodeType': 'panel',
+      'createBy': 'demo',
+      'createTime': 1651025490457,
+      'panelType': 'self',
+      'source': null,
+      'extend1': null,
+      'extend2': null,
+      'remark': null,
+      'mobileLayout': true,
+      'panelStyle': null,
+      'panelData': null,
+      'label': 'zdw1',
+      'leaf': null,
+      'privileges': 'export,grant,manage,view',
+      'defaultPanelId': null,
+      'defaultPanelName': null,
+      'isDefault': false,
+      'sourcePanelName': null,
+      'children': null,
+      'viewsInfo': null
     },
     canvasStyleDataTemp: null, // 页面全局临时存储数据
     componentDataTemp: null, // 画布组件临时存储数据
