@@ -49,7 +49,6 @@
             </div>
             <!-- 视图图表 end -->
             <!-- 过滤组件 start -->
-
             <div
               class="button-div-class"
               style="  width: 24px;height: 24px;text-align: center;line-height: 1;position: relative;margin: 16px auto 0px; "
@@ -69,7 +68,6 @@
                 {{ $t('panel.module') }}
               </div>
             </div>
-
             <div style="height: 1px; position: relative; margin: 0px auto;background-color:#E6E6E6;">
               <div
                 style="width: 60px;height: 1px;line-height: 1px;text-align: center;white-space: pre;text-overflow: ellipsis;position: relative;flex-shrink: 0;"
@@ -77,7 +75,6 @@
             </div>
             <!-- 过滤组件 end -->
             <!-- 其他组件 start -->
-
             <div
               class="button-div-class"
               style="  width: 24px;height: 24px;text-align: center;line-height: 1;position: relative;margin: 16px auto 0px; "
@@ -97,14 +94,12 @@
                 {{ $t('panel.other_module') }}
               </div>
             </div>
-
             <div style="height: 1px; position: relative; margin: 0px auto;background-color:#E6E6E6;">
               <div
                 style="width: 60px;height: 1px;line-height: 1px;text-align: center;white-space: pre;text-overflow: ellipsis;position: relative;flex-shrink: 0;"
               />
             </div>
             <!-- 其他组件 end -->
-
             <!-- 视图复用 start -->
             <div
               class="button-div-class"
@@ -304,6 +299,7 @@
     <!--矩形样式组件-->
     <TextAttr v-if="showAttr" :scroll-left="scrollLeft" :scroll-top="scrollTop" />
     <!--复用ChartGroup组件 不做显示-->
+    <!-- 视图弹窗 -->
     <ChartGroup
       ref="chartGroup"
       :opt-from="'panel'"

@@ -2,7 +2,7 @@
  * @Author: atdow
  * @Date: 2022-04-27 15:27:03
  * @LastEditors: null
- * @LastEditTime: 2022-04-27 18:35:57
+ * @LastEditTime: 2022-04-28 15:06:49
  * @Description: file description
  */
 
@@ -14,7 +14,7 @@ const getDefaultState = () => {
       // name: '',
       // preStyle: null,
       // proxy: null,
-      'id': '5a3e3189-c5cf-11ec-ab02-6b7baca5d5c9',
+      'id': '40894b9b-c6c1-11ec-9f77-e17bb3700b30',
       'name': 'zdw1',
       'pid': '54ef3ee8-c5cf-11ec-ab02-6b7baca5d5c9',
       'level': 1,
