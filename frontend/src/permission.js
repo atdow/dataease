@@ -95,7 +95,9 @@ router.beforeEach(async(to, from, next) => {
 })
 export const loadMenus = (next, to) => {
   buildMenus().then(res => {
+    // const datas = res.data.filter(dataItem => dataItem.name === 'wizard' || dataItem.name === 'panel' || dataItem.name === 'dataset'|| dataItem.name === 'datasource')
     const datas = res.data
+    console.log('datas:', datas)
     const filterDatas = filterRouter(datas)
     const asyncRouter = filterAsyncRouter(filterDatas)
     // 如果包含首页 则默认页面是 首页 否则默认页面是仪表板页面

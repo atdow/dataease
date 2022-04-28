@@ -284,8 +284,9 @@
         <el-step :title="$t('chart.select_dataset')" />
         <el-step :title="$t('chart.select_chart_type')" />
       </el-steps>
-
+      <!-- 选择数据集 -->
       <table-selector v-show="createActive === 1" @getTable="getTable" />
+      <!-- 选择图表类型 -->
       <el-row v-show="createActive === 2" style="padding: 0 20px">
         <el-row class="chart-box">
           <span>
@@ -310,6 +311,7 @@
           </span>
           <el-row>
             <div>
+              <!-- 使用el-radio-group实现view.type数据绑定 -->
               <el-radio-group v-model="view.type" style="width: 100%">
                 <chart-type
                   ref="cu-chart-type"
@@ -528,6 +530,7 @@ export default {
       chartGroupTreeAvailable: [],
       createActive: 1,
       view: {
+        // isPlugin: false
         render: 'antv',
         type: 'table-normal'
       },
@@ -581,8 +584,13 @@ export default {
     },
     chartType(val) {
       this.view.isPlugin = val && this.$refs['cu-chart-type'] && this.$refs['cu-chart-type'].currentIsPlugin(val)
+    },
+    view: {
+      deep: true,
+      handler: function() {
+        console.log('view:', this.view)
+      }
     }
-
   },
   created() {
     const plugins = localStorage.getItem('plugin-views') && JSON.parse(localStorage.getItem('plugin-views'))
@@ -800,6 +808,7 @@ export default {
         })
       }
     },
+    // NOTE 暂时不知道是什么逻辑
     treeNode(cache = false) {
       const modelInfo = localStorage.getItem('chart-tree')
       const userCache = (modelInfo && cache)
@@ -876,7 +885,7 @@ export default {
         type: 'table-normal'
       }
     },
-
+    // 创建视图
     createChart() {
       if (!this.chartName || this.chartName === '') {
         this.$message({
@@ -943,13 +952,14 @@ export default {
         if (this.optFrom === 'panel') {
           this.$emit('newViewInfo', { 'id': response.data.id })
         } else {
+          // NOTE 暂时不知道是什么逻辑
           _this.expandedArray.push(response.data.sceneId)
           _this.currentKey = response.data.id
           _this.treeNode()
         }
       })
     },
-
+    // 设置默认配置
     setChartDefaultOptions(view) {
       const type = view.type
       const attr = JSON.parse(view.customAttr)

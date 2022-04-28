@@ -972,10 +972,12 @@ export default {
       this.show = false
       this.$refs['chartGroup'].selectTable()
     },
+    // 新建视图后的回调
     newViewInfo(newViewInfo) {
       let component
       const newComponentId = uuid.v1()
       // 用户视图设置 复制一个模板
+      // console.log('componentList:', componentList)
       componentList.forEach(componentTemp => {
         if (componentTemp.type === 'view') {
           component = deepCopy(componentTemp)
@@ -1008,7 +1010,7 @@ export default {
       this.$store.commit('addComponent', { component })
       this.$store.commit('recordSnapshot', 'newViewInfo')
       this.clearCurrentInfo()
-      this.$store.commit('setCurComponent', { component: component, index: this.componentData.length - 1 })
+      this.$store.commit('setCurComponent', { component: component, index: this.componentData.length - 1 }) // 一定是最新的那个
 
       // 打开属性栏
       bus.$emit('change_panel_right_draw', true)

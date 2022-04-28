@@ -1,9 +1,16 @@
+/*
+ * @Author: atdow
+ * @Date: 2022-04-27 22:56:59
+ * @LastEditors: null
+ * @LastEditTime: 2022-04-28 23:35:03
+ * @Description: file description
+ */
 import store from '@/store/index'
 import { deepCopy } from '@/components/canvas/utils/utils'
 
 export default {
   state: {
-    snapshotData: [], // 编辑器快照数据
+    snapshotData: [], // 编辑器快照数据(用于存储过程操作)
     snapshotStyleData: [], // 样式改变也记录快照
     snapshotIndex: -1, // 快照索引
     changeTimes: -1, // 修改次数

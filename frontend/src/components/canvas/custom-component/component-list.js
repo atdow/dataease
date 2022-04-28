@@ -116,6 +116,7 @@ export const FRAMELINKS = {
   src: ''
 }
 
+// 样式
 export const assistList = [
   {
     id: '10001',
@@ -144,6 +145,7 @@ export const assistList = [
 
 ]
 
+// 多媒体
 export const pictureList = [
   {
     id: '20001',
@@ -170,7 +172,7 @@ export const pictureList = [
     defaultClass: 'text-filter'
   }
 ]
-
+// 其他
 export const otherList = [
   {
     id: '30001',
